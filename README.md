@@ -18,3 +18,6 @@ Given a string of digits, return the longest substring with alternating odd/even
 
 ## Diamond Sum
 Given an nxn grid of consecutive numbers, return the grid's Diamond Sum. The diamond sum is defined as the sum of the numbers making up the diagonals between adjacent sides.
+
+## Point Within Triangle
+Create a function that takes four points. The first three are the coordinates of the corners of a triangle. Return true if the fourth point lies within the triangle, false if it doesn't.
