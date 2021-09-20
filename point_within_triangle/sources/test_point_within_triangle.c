@@ -57,7 +57,6 @@ int test_get_length_of_side(Point point1, Point point2, double distance)
     double distance2 = get_length_of_side(point1, point2);
     if (are_decimals_equal(distance2, distance))
         return TRUE;
-    printf("False");
     return FALSE;
 }
 
