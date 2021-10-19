@@ -21,3 +21,6 @@ Given an nxn grid of consecutive numbers, return the grid's Diamond Sum. The dia
 
 ## Point Within Triangle
 Create a function that takes four points. The first three are the coordinates of the corners of a triangle. Return true if the fourth point lies within the triangle, false if it doesn't.
+
+## Poker Hand Ranking
+Establish which kind of Poker combination is present in a deck of five cards. Every card is a string containing the card value (with the upper-case initial for face-cards) and the lower-case initial for suits.
