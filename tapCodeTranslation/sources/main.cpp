@@ -3,11 +3,9 @@
 
 int main()
 {
-    std::cout << tapCode("break") << std::endl;
-    // -> ". .. .... .. . ..... . . . ..."
-
-    std::cout << tapCode(".... ... ... ..... . ..... ... ... .... ....") << std::endl;
-    // -> "spent"
-
+    TapCode tapCode;
+    std::cout << (tapCode.tapCode("break") == ". .. .... .. . ..... . . . ...");
+    // std::cout << (tapCode.tapCode(".... ... ... ..... . ..... ... ... .... ....") == "spent");
+    std::cout << std::endl;
     return 0;
 }
