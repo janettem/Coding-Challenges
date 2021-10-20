@@ -56,3 +56,10 @@ C++
 
 ### Explanation
 Establish which kind of Poker combination is present in a hand of five cards.
+
+## Tap Code Translation
+### Language
+C++
+
+### Explanation
+TBA
