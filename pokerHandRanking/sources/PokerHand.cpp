@@ -1,17 +1,12 @@
 #include "PokerHand.h"
 
-PokerHand::PokerHand(Card aHand[5])
+PokerHand::PokerHand(Card card1, Card card2, Card card3, Card card4, Card card5)
 {
-    setHand(aHand);
-}
-
-void PokerHand::setHand(Card aHand[5])
-{
-    hand[0] = aHand[0];
-    hand[1] = aHand[1];
-    hand[2] = aHand[2];
-    hand[3] = aHand[3];
-    hand[4] = aHand[4];
+    hand[0] = card1;
+    hand[1] = card2;
+    hand[2] = card3;
+    hand[3] = card4;
+    hand[4] = card5;
 }
 
 PokerHand::Combination PokerHand::getCombination()
@@ -30,7 +25,7 @@ PokerHand::Combination PokerHand::getCombination()
         return Straight;
     else if (isThreeOfAKind())
         return ThreeOfAKind;
-    else if (isTwoPair())
+    else if (isTwoPairs())
         return TwoPairs;
     else if (isPair())
         return Pair;
@@ -39,35 +34,36 @@ PokerHand::Combination PokerHand::getCombination()
 
 bool PokerHand::isRoyalFlush()
 {
-    if (isSameSuit() &&
-        hasRank(Card::Ace) &&
+    if (hasRank(Card::Ace) &&
         hasRank(Card::King) &&
         hasRank(Card::Queen) &&
         hasRank(Card::Jack) &&
-        hasRank(Card::Ten))
+        hasRank(Card::Ten) &&
+        isSameSuit())
         return true;
     return false;
 }
 
 bool PokerHand::isStraightFlush()
 {
-    if (isSameSuit() &&
-        isInSequence())
+    if (isInSequence() &&
+        isSameSuit() &&
+        !isRoyalFlush())
         return true;
     return false;
 }
 
 bool PokerHand::isFourOfAKind()
 {
-    if (isNOfAKind(4))
+    if (hasNOfAKind(4))
         return true;
     return false;
 }
 
 bool PokerHand::isFullHouse()
 {
-    if (isNOfAKind(3) &&
-        isNOfAKind(2))
+    if (hasNOfAKind(3) &&
+        hasNOfAKind(2))
         return true;
     return false;
 }
@@ -90,98 +86,26 @@ bool PokerHand::isStraight()
 
 bool PokerHand::isThreeOfAKind()
 {
-    if (isNOfAKind(3) &&
-        !isNOfAKind(2))
+    if (hasNOfAKind(3) &&
+        !isFullHouse())
         return true;
     return false;
 }
 
-bool PokerHand::isTwoPair()
+bool PokerHand::isTwoPairs()
 {
-    Card::Rank rank = getNOfAKindRank(2, Card::None);
-    if (rank != Card::None &&
-        getNOfAKindRank(2, rank) != Card::None)
+    if (hasTwoPairs())
         return true;
     return false;
 }
 
 bool PokerHand::isPair()
 {
-    if (isNOfAKind(2) &&
-        !isNOfAKind(3) &&
-        !isTwoPair())
+    if (hasNOfAKind(2) &&
+        !isFullHouse() &&
+        !hasTwoPairs())
         return true;
     return false;
-}
-
-bool PokerHand::isNOfAKind(int n)
-{
-    for (int i = 0; i < 5; i++)
-    {
-        if (countKinds(hand[i]) == n)
-            return true;
-    }
-    return false;
-}
-
-Card::Rank PokerHand::getNOfAKindRank(int n, Card::Rank rankToAvoid)
-{
-    Card::Rank rank;
-    for (int i = 0; i < 5; i++)
-    {
-        rank = hand[i].rank;
-        if (rank != rankToAvoid &&
-            countKinds(hand[i]) == n)
-            return rank;
-    }
-    return Card::None;
-}
-
-int PokerHand::countKinds(Card card)
-{
-    int kinds = 0;
-    Card::Rank rank = card.rank;
-    for (int i = 0; i < 5; i++)
-    {
-        if (hand[i].rank == rank)
-            kinds++;
-    }
-    return kinds;
-}
-
-bool PokerHand::isInSequence()
-{
-    int lowestValue = (int)getLowestValue();
-    for (int value = lowestValue + 1; value <= lowestValue + 4; value++)
-    {
-        if (!hasRank((Card::Rank)value))
-            return false;
-    }
-    return true;
-}
-
-bool PokerHand::isSameSuit()
-{
-    Card::Suit suit = hand[0].suit;
-    for (int i = 0; i < 5; i++)
-    {
-        if (hand[i].suit != suit)
-            return false;
-    }
-    return true;
-}
-
-Card::Rank PokerHand::getLowestValue()
-{
-    Card::Rank lowestValue = hand[0].rank;
-    Card::Rank value;
-    for (int i = 1; i < 5; i++)
-    {
-        value = hand[i].rank;
-        if (value < lowestValue)
-            lowestValue = value;
-    }
-    return lowestValue;
 }
 
 bool PokerHand::hasRank(Card::Rank rank)
@@ -192,4 +116,77 @@ bool PokerHand::hasRank(Card::Rank rank)
             return true;
     }
     return false;
+}
+
+bool PokerHand::isSameSuit()
+{
+    Card::Suit suit = hand[0].suit;
+    for (int i = 1; i < 5; i++)
+    {
+        if (hand[i].suit != suit)
+            return false;
+    }
+    return true;
+}
+
+bool PokerHand::isInSequence()
+{
+    int lowestRank = (int)getLowestRank();
+    for (int rank = lowestRank + 1; rank <= lowestRank + 4; rank++)
+    {
+        if (!hasRank((Card::Rank)rank))
+            return false;
+    }
+    return true;
+}
+
+bool PokerHand::hasNOfAKind(int n)
+{
+    for (int i = 0; i < 5; i++)
+    {
+        if (countRanks(hand[i].rank) == n)
+            return true;
+    }
+    return false;
+}
+
+bool PokerHand::hasTwoPairs()
+{
+    Card::Rank rank = (Card::Rank)0;
+    for (int i = 0; i < 5; i++)
+    {
+        if (hand[i].rank != rank &&
+            countRanks(hand[i].rank) == 2)
+        {
+            if (!rank)
+                rank = hand[i].rank;
+            else
+                return true;
+        }
+    }
+    return false;
+}
+
+Card::Rank PokerHand::getLowestRank()
+{
+    Card::Rank lowestRank = hand[0].rank;
+    Card::Rank rank;
+    for (int i = 1; i < 5; i++)
+    {
+        rank = hand[i].rank;
+        if (rank < lowestRank)
+            lowestRank = rank;
+    }
+    return lowestRank;
+}
+
+int PokerHand::countRanks(Card::Rank rank)
+{
+    int ranks = 0;
+    for (int i = 0; i < 5; i++)
+    {
+        if (hand[i].rank == rank)
+            ranks++;
+    }
+    return ranks;
 }

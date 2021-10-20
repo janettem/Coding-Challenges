@@ -1,9 +1,11 @@
+#ifndef CARD
+#define CARD
+
 struct Card
 {
     enum Rank
     {
-        None = 1,
-        Two,
+        Two = 2,
         Three,
         Four,
         Five,
@@ -29,3 +31,5 @@ struct Card
     Rank rank;
     Suit suit;
 };
+
+#endif

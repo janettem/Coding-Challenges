@@ -21,8 +21,7 @@ public:
         RoyalFlush
     };
 
-    PokerHand(Card aHand[5]);
-    void setHand(Card aHand[5]);
+    PokerHand(Card card1, Card card2, Card card3, Card card4, Card card5);
     Combination getCombination();
 
 private:
@@ -35,15 +34,15 @@ private:
     bool isFlush();
     bool isStraight();
     bool isThreeOfAKind();
-    bool isTwoPair();
+    bool isTwoPairs();
     bool isPair();
-    bool isNOfAKind(int n);
-    Card::Rank getNOfAKindRank(int n, Card::Rank rankToAvoid);
-    int countKinds(Card card);
-    bool isInSequence();
-    bool isSameSuit();
-    Card::Rank getLowestValue();
     bool hasRank(Card::Rank rank);
+    bool isSameSuit();
+    bool isInSequence();
+    bool hasNOfAKind(int n);
+    bool hasTwoPairs();
+    Card::Rank getLowestRank();
+    int countRanks(Card::Rank rank);
 };
 
 #endif
