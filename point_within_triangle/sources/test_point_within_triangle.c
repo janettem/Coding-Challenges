@@ -18,35 +18,35 @@ int main()
     Point point_outside = get_point(3, 2);
 
     print_result(test_get_point(1, 2));
-    print_result(test_get_perimeter_of_triangle(side1, side2, side3));
+    print_result(test_get_perimeter(side1, side2, side3));
     print_result(test_get_length_of_side(corner1, corner2, 4.472136));
-    print_result(test_get_area_of_triangle(corner1, corner2, corner3, 8.000000100624));
-    print_result(test_is_point_inside_triangle(corner1, corner2, corner3, point_inside, TRUE));
-    print_result(test_is_point_inside_triangle(corner1, corner2, corner3, point_outside, FALSE));
+    print_result(test_get_area(corner1, corner2, corner3, 8.000000100624));
+    print_result(test_is_point_inside(corner1, corner2, corner3, point_inside, TRUE));
+    print_result(test_is_point_inside(corner1, corner2, corner3, point_outside, FALSE));
     printf("\n");
 
     return 0;
 }
 
-int test_is_point_inside_triangle(Point corner1, Point corner2, Point corner3, Point point, int inside)
+int test_is_point_inside(Point corner1, Point corner2, Point corner3, Point point, int inside)
 {
-    int inside2 = is_point_inside_triangle(corner1, corner2, corner3, point);
+    int inside2 = is_point_inside(corner1, corner2, corner3, point);
     if (inside2 == inside)
         return TRUE;
     return FALSE;
 }
 
-int test_get_area_of_triangle(Point corner1, Point corner2, Point corner3, double area)
+int test_get_area(Point corner1, Point corner2, Point corner3, double area)
 {
-    double area2 = get_area_of_triangle(corner1, corner2, corner3);
+    double area2 = get_area(corner1, corner2, corner3);
     if (are_decimals_equal(area2, area))
         return TRUE;
     return FALSE;
 }
 
-int test_get_perimeter_of_triangle(double side1, double side2, double side3)
+int test_get_perimeter(double side1, double side2, double side3)
 {
-    double perimeter = get_perimeter_of_triangle(side1, side2, side3);
+    double perimeter = get_perimeter(side1, side2, side3);
     if (perimeter == side1 + side2 + side3)
         return TRUE;
     return FALSE;

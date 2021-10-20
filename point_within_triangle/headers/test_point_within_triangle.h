@@ -8,9 +8,9 @@
 #define GREEN "\033[0;32m"
 #define DEFAULT "\033[0m"
 
-int test_is_point_inside_triangle(Point corner1, Point corner2, Point corner3, Point point, int inside);
-int test_get_area_of_triangle(Point corner1, Point corner2, Point corner3, double area);
-int test_get_perimeter_of_triangle(double side1, double side2, double side3);
+int test_is_point_inside(Point corner1, Point corner2, Point corner3, Point point, int inside);
+int test_get_area(Point corner1, Point corner2, Point corner3, double area);
+int test_get_perimeter(double side1, double side2, double side3);
 int test_get_length_of_side(Point point1, Point point2, double distance);
 int are_decimals_equal(double decimal1, double decimal2);
 int test_get_point(int x, int y);

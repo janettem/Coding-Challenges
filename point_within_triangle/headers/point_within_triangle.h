@@ -12,9 +12,9 @@ typedef struct Point
 #define TRUE 1
 #define FALSE 0
 
-int is_point_inside_triangle(Point corner1, Point corner2, Point corner3, Point point);
-double get_area_of_triangle(Point corner1, Point corner2, Point corner3);
-double get_perimeter_of_triangle(double side1, double side2, double side3);
+int is_point_inside(Point corner1, Point corner2, Point corner3, Point point);
+double get_area(Point corner1, Point corner2, Point corner3);
+double get_perimeter(double side1, double side2, double side3);
 double get_length_of_side(Point point1, Point point2);
 Point get_point(int x, int y);
 
