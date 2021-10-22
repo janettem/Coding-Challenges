@@ -62,4 +62,4 @@ Establish which kind of Poker combination is present in a hand of five cards.
 C++
 
 ### Explanation
-TBA
+Tap code is a way to communicate messages via a series of taps for each letter in the message. Letters are arranged in a 5x5 polybius square, with the letter "K" being moved to the space with "C". Each letter is translated by tapping out the row and column number that the letter appears in, leaving a short pause in-between. Write a function that returns the tap code if given a word, or returns the translated word if given the tap code.
