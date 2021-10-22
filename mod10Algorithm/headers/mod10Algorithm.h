@@ -3,6 +3,6 @@
 
 #include <string>
 
-bool validCreditCard(std::string number);
+bool isValidCreditCard(std::string number);
 
 #endif
