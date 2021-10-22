@@ -5,7 +5,7 @@
 20.10.2021
 
 ## Explanation
-Tap code is a way to communicate messages via a series of taps for each letter in the message. Letters are arranged in a 5x5 polybius square, with the letter "K" being moved to the space with "C":
+Tap code is a way to communicate messages via a series of taps for each letter in the message. Letters are arranged in a 5x5 polybius square, with the letter "k" being moved to the space with "c":
 
 ```
     1   2   3   4   5
