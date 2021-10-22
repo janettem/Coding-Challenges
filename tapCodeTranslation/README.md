@@ -36,3 +36,18 @@ Examples:
 tapCode("break"); // -> ". .. .... .. . ..... . . . ..."
 tapCode(". .. .... .. . ..... . . . ..."); // -> "breac"
 ```
+
+## Usage
+Open this directory in a terminal.
+
+Compile the application:
+
+```
+make
+```
+
+Run the application:
+
+```
+./tapCodeTranslation
+```
