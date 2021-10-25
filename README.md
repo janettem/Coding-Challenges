@@ -69,4 +69,4 @@ Tap code is a way to communicate messages via a series of taps for each letter i
 C++
 
 ### Explanation
-TBA
+Create a function that takes a credit card number as a parameter and checks whether it is valid using the Luhn algorithm also known as the mod 10 algorithm.
