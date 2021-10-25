@@ -53,7 +53,7 @@ Create a function that takes a credit card number as a parameter and checks whet
 2.3 Sum the digits of all the positions (s):
 
 ```
-718947691672 -> 7 + 1 + 8 + 9 + 4 + 7 + 6 + 9 + 1 + 6 + 7 + 2 = 67
+7994769772 -> 7 + 9 + 9 + 4 + 7 + 6 + 9 + 7 + 7 + 2 = 67
 ```
 
 2.4 The calculated check digit is equal to 10 - s % 10:
