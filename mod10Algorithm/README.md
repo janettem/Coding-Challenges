@@ -68,7 +68,7 @@ Create a function that takes a credit card number as a parameter and checks whet
 3 = 3
 ```
 
-If they match the credit card number passed the test.
+If they match, the credit card number passed the test.
 
 ## Usage
 Open this directory in a terminal.
