@@ -3,7 +3,8 @@
 
 #include <vector>
 #include <string>
+#include <cmath>
 
-int soroban(std::vector<std::string> frame);
+int getSorobanValue(std::vector<std::string> soroban);
 
 #endif
