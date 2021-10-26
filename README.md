@@ -70,3 +70,10 @@ C++
 
 ### Explanation
 Create a function that takes a credit card number as a parameter and checks whether it is valid using the Luhn algorithm also known as the mod 10 algorithm.
+
+## Read the Abascus
+### Language
+C++
+
+### Explanation
+TBA
