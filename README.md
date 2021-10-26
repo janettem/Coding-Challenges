@@ -71,9 +71,9 @@ C++
 ### Explanation
 Create a function that takes a credit card number as a parameter and checks whether it is valid using the Luhn algorithm also known as the mod 10 algorithm.
 
-## Read the Abascus
+## Read the Abacus
 ### Language
 C++
 
 ### Explanation
-TBA
+Given an array of strings representing a soroban, a Japanese abacus counting tool, return the number being displayed.
