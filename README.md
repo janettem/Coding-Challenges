@@ -83,4 +83,4 @@ Given an array of strings representing a soroban, a Japanese abacus counting too
 C++
 
 ### Explanation
-TBA
+Write a function to find the anagram of the second string embedded somewhere in the first string. If the hidden anagram is found, return it. Otherwise, return "not found".

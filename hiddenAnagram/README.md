@@ -5,7 +5,14 @@
 27.10.2021
 
 ## Explanation
-TBA
+Write a function to find the anagram of the second string embedded somewhere in the first string. If the hidden anagram is found, return it. Otherwise, return "not found".
+
+Examples:
+
+```
+getHiddenAnagram("Banana? margaritas", "ANAGRAM"); // -> "anamarg"
+getHiddenAnagram("Bright is the moon", "Bongo mirth"); // -> "not found"
+```
 
 ## Usage
 Open this directory in a terminal.
