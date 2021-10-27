@@ -77,3 +77,10 @@ C++
 
 ### Explanation
 Given an array of strings representing a soroban, a Japanese abacus counting tool, return the number being displayed.
+
+## Hidden Anagram
+### Language
+C++
+
+### Explanation
+TBA
