@@ -3,6 +3,6 @@
 
 #include <vector>
 
-int getLargestIsland(std::vector<std::vector<int>> map);
+int countLargestIslandSize(std::vector<std::vector<int>> map);
 
 #endif
