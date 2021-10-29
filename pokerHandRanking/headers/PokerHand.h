@@ -12,11 +12,11 @@ public:
         HighCard,
         Pair,
         TwoPairs,
-        ThreeOfAKind,
+        ThreeOfKind,
         Straight,
         Flush,
         FullHouse,
-        FourOfAKind,
+        FourOfKind,
         StraightFlush,
         RoyalFlush
     };
@@ -29,17 +29,17 @@ private:
 
     bool isRoyalFlush();
     bool isStraightFlush();
-    bool isFourOfAKind();
+    bool isFourOfKind();
     bool isFullHouse();
     bool isFlush();
     bool isStraight();
-    bool isThreeOfAKind();
+    bool isThreeOfKind();
     bool isTwoPairs();
     bool isPair();
     bool hasRank(Card::Rank rank);
     bool isSameSuit();
     bool isInSequence();
-    bool hasNOfAKind(int n);
+    bool hasNOfKind(int n);
     bool hasTwoPairs();
     Card::Rank getLowestRank();
     int countRanks(Card::Rank rank);

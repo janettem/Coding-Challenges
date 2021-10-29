@@ -15,16 +15,16 @@ PokerHand::Combination PokerHand::getCombination()
         return RoyalFlush;
     else if (isStraightFlush())
         return StraightFlush;
-    else if (isFourOfAKind())
-        return FourOfAKind;
+    else if (isFourOfKind())
+        return FourOfKind;
     else if (isFullHouse())
         return FullHouse;
     else if (isFlush())
         return Flush;
     else if (isStraight())
         return Straight;
-    else if (isThreeOfAKind())
-        return ThreeOfAKind;
+    else if (isThreeOfKind())
+        return ThreeOfKind;
     else if (isTwoPairs())
         return TwoPairs;
     else if (isPair())
@@ -53,17 +53,17 @@ bool PokerHand::isStraightFlush()
     return false;
 }
 
-bool PokerHand::isFourOfAKind()
+bool PokerHand::isFourOfKind()
 {
-    if (hasNOfAKind(4))
+    if (hasNOfKind(4))
         return true;
     return false;
 }
 
 bool PokerHand::isFullHouse()
 {
-    if (hasNOfAKind(3) &&
-        hasNOfAKind(2))
+    if (hasNOfKind(3) &&
+        hasNOfKind(2))
         return true;
     return false;
 }
@@ -84,9 +84,9 @@ bool PokerHand::isStraight()
     return false;
 }
 
-bool PokerHand::isThreeOfAKind()
+bool PokerHand::isThreeOfKind()
 {
-    if (hasNOfAKind(3) &&
+    if (hasNOfKind(3) &&
         !isFullHouse())
         return true;
     return false;
@@ -101,7 +101,7 @@ bool PokerHand::isTwoPairs()
 
 bool PokerHand::isPair()
 {
-    if (hasNOfAKind(2) &&
+    if (hasNOfKind(2) &&
         !isFullHouse() &&
         !hasTwoPairs())
         return true;
@@ -140,7 +140,7 @@ bool PokerHand::isInSequence()
     return true;
 }
 
-bool PokerHand::hasNOfAKind(int n)
+bool PokerHand::hasNOfKind(int n)
 {
     for (int i = 0; i < 5; i++)
     {

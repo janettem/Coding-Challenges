@@ -3,11 +3,11 @@
 
 bool testRoyalFlush();
 bool testStraightFlush();
-bool testFourOfAKind();
+bool testFourOfKind();
 bool testFullHouse();
 bool testFlush();
 bool testStraight();
-bool testThreeOfAKind();
+bool testThreeOfKind();
 bool testTwoPairs();
 bool testPair();
 bool testHighCard();
@@ -16,11 +16,11 @@ int main()
 {
     std::cout << testRoyalFlush();
     std::cout << testStraightFlush();
-    std::cout << testFourOfAKind();
+    std::cout << testFourOfKind();
     std::cout << testFullHouse();
     std::cout << testFlush();
     std::cout << testStraight();
-    std::cout << testThreeOfAKind();
+    std::cout << testThreeOfKind();
     std::cout << testTwoPairs();
     std::cout << testPair();
     std::cout << testHighCard();
@@ -52,14 +52,14 @@ bool testStraightFlush()
     return false;
 }
 
-bool testFourOfAKind()
+bool testFourOfKind()
 {
     PokerHand hand({Card::Ten, Card::Spades},
                    {Card::Ten, Card::Clubs},
                    {Card::Eight, Card::Diamonds},
                    {Card::Ten, Card::Diamonds},
                    {Card::Ten, Card::Hearts});
-    if (hand.getCombination() == PokerHand::FourOfAKind)
+    if (hand.getCombination() == PokerHand::FourOfKind)
         return true;
     return false;
 }
@@ -100,14 +100,14 @@ bool testStraight()
     return false;
 }
 
-bool testThreeOfAKind()
+bool testThreeOfKind()
 {
     PokerHand hand({Card::Ace, Card::Hearts},
                    {Card::King, Card::Hearts},
                    {Card::Queen, Card::Spades},
                    {Card::King, Card::Spades},
                    {Card::King, Card::Diamonds});
-    if (hand.getCombination() == PokerHand::ThreeOfAKind)
+    if (hand.getCombination() == PokerHand::ThreeOfKind)
         return true;
     return false;
 }
