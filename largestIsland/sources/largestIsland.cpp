@@ -11,7 +11,7 @@ static int *copyRow(std::vector<int> row);
 static int countIslandSizeAndErase(int **map, int rows, int columns, int y, int x);
 static void deleteMatrix(int **matrix, int size);
 
-int countLargestIslandSize(std::vector<std::vector<int>> map)
+int getLargestIslandArea(std::vector<std::vector<int>> map)
 {
     int largestSize = 0;
     int size;

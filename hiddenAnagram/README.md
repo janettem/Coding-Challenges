@@ -9,7 +9,7 @@ Write a function to find the anagram of the second string embedded somewhere in 
 
 Examples:
 
-```
+```c++
 getHiddenAnagram("Banana? margaritas", "ANAGRAM"); // -> "anamarg"
 getHiddenAnagram("Bright is the moon", "Bongo mirth"); // -> "not found"
 ```
@@ -19,12 +19,12 @@ Open this directory in a terminal.
 
 Compile the application:
 
-```
+```shell
 make
 ```
 
 Run the application:
 
-```
+```shell
 ./hiddenAnagram
 ```

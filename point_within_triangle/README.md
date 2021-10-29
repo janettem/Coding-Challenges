@@ -15,12 +15,12 @@ Open this directory in a terminal.
 
 Compile the test:
 
-```
+```shell
 make
 ```
 
 Run the test:
 
-```
+```shell
 ./test
 ```

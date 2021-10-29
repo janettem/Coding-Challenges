@@ -75,12 +75,12 @@ Open this directory in a terminal.
 
 Compile the application:
 
-```
+```shell
 make
 ```
 
 Run the application:
 
-```
+```shell
 ./mod10Algorithm
 ```

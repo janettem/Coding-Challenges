@@ -32,7 +32,7 @@ Write a function that returns the tap code if given a word, or returns the trans
 
 Examples:
 
-```
+```c++
 tapCode("break"); // -> ". .. .... .. . ..... . . . ..."
 tapCode(". .. .... .. . ..... . . . ..."); // -> "breac"
 ```
@@ -42,12 +42,12 @@ Open this directory in a terminal.
 
 Compile the application:
 
-```
+```shell
 make
 ```
 
 Run the application:
 
-```
+```shell
 ./tapCodeTranslation
 ```
