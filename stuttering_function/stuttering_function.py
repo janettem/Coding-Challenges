@@ -3,9 +3,9 @@ def stutter(str):
 
 
 def test():
-    print(stutter("incredible"))
-    print(stutter("enthusiastic"))
-    print(stutter("outstanding"))
+    print(stutter("incredible"))  # -> "in... in... incredible?"
+    print(stutter("enthusiastic"))  # -> "en... en... enthusiastic?"
+    print(stutter("outstanding"))  # -> "ou... ou... outstanding?"
 
 
 test()

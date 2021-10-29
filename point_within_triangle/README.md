@@ -1,4 +1,4 @@
-# point_within_triangle
+# Point Within Triangle
 [Point Within Triangle](https://edabit.com/challenge/kCapSLB9tWKjCQGNE)
 
 ## Created

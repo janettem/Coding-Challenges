@@ -1,4 +1,4 @@
-# longest_alternating_substring
+# Longest Alternating Substring
 [Longest Alternating Substring](https://edabit.com/challenge/RB6iWFrCd6rXWH3vi)
 
 ## Created
@@ -9,3 +9,12 @@ Given a string of digits, return the longest substring with alternating odd/even
 
 ### Note
 In the challenge, it isn't specified if errors should be handled. So, I decided not to handle errors.
+
+## Usage
+Open this directory in a terminal.
+
+Run the application:
+
+```shell
+python longest_alternating_substring.py
+```

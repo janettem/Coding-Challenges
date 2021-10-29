@@ -1,4 +1,4 @@
-# finding_adjacent_nodes
+# Finding Adjacent Nodes
 [Finding Adjacent Nodes](https://edabit.com/challenge/3DAkZHv2LZjgqWbvW)
 
 ## Created
@@ -9,3 +9,12 @@ Determine if two nodes are adjacent in an undirected graph when given the adjace
 
 ### Note
 In the challenge, it isn't specified if errors should be handled. So, I decided not to handle errors.
+
+## Usage
+Open this directory in a terminal.
+
+Run the application:
+
+```shell
+python finding_adjacent_nodes.py
+```

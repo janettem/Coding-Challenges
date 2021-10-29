@@ -11,12 +11,12 @@ def get_prime_factors(num: int) -> list:
 
 
 def test():
-    print(get_prime_factors(20)) # => [2, 2, 5]
-    print(get_prime_factors(100)) # => [2, 2, 5, 5]
-    print(get_prime_factors(8912234)) # => [2, 47, 94811]
-    print(get_prime_factors(169)) # => [13, 13]
-    print(get_prime_factors(12)) # => [2, 2, 3]
-    print(get_prime_factors(35)) # => [5, 7]
+    print(get_prime_factors(20))  # -> [2, 2, 5]
+    print(get_prime_factors(100))  # -> [2, 2, 5, 5]
+    print(get_prime_factors(8912234))  # -> [2, 47, 94811]
+    print(get_prime_factors(169))  # -> [13, 13]
+    print(get_prime_factors(12))  # -> [2, 2, 3]
+    print(get_prime_factors(35))  # -> [5, 7]
 
 
 def main():

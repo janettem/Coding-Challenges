@@ -1,4 +1,4 @@
-# hiddenAnagram
+# Hidden Anagram
 [Hidden Anagram](https://edabit.com/challenge/vxWGJmtjpWtu36xfj)
 
 ## Created

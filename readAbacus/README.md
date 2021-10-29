@@ -1,4 +1,4 @@
-# readTheAbacus
+# Read the Abacus
 [Read the Abacus](https://edabit.com/challenge/oyueonWr7h4S24nwm)
 
 ## Created
@@ -49,5 +49,5 @@ make
 Run the application:
 
 ```shell
-./readTheAbacus
+./readAbacus
 ```

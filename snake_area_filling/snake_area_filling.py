@@ -10,9 +10,9 @@ def snakefill(screen_side: int) -> int:
 
 
 def test():
-    print(snakefill(3)) # => 3
-    print(snakefill(6)) # => 5
-    print(snakefill(24)) # => 9
+    print(snakefill(3))  # -> 3
+    print(snakefill(6))  # -> 5
+    print(snakefill(24))  # -> 9
 
 
 def main():

@@ -1,5 +1,5 @@
-#ifndef READ_THE_ABACUS
-#define READ_THE_ABACUS
+#ifndef READ_ABACUS
+#define READ_ABACUS
 
 #include <vector>
 #include <string>

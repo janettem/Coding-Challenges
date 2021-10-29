@@ -1,4 +1,5 @@
 NAME = test
+
 SOURCES = sources/point_within_triangle.c sources/test_point_within_triangle.c
 
 all: $(NAME)

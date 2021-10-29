@@ -1,4 +1,4 @@
-# stuttering_function
+# Stuttering Function
 [Stuttering Function](https://edabit.com/challenge/gt9LLufDCMHKMioh2)
 
 ## Created
@@ -6,3 +6,12 @@
 
 ## Explanation
 Write a function that stutters a word as if someone is struggling to read it. The first two letters are repeated twice with an ellipsis "..." and space after each, and then the word is pronounced with a question mark "?".
+
+## Usage
+Open this directory in a terminal.
+
+Run the application:
+
+```shell
+python stuttering_function.py
+```

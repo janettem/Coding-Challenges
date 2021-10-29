@@ -1,6 +1,6 @@
-NAME = readTheAbacus
+NAME = readAbacus
 
-SOURCES = sources/main.cpp sources/readTheAbacus.cpp
+SOURCES = sources/main.cpp sources/readAbacus.cpp
 
 all: $(NAME)
 

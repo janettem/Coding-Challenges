@@ -1,4 +1,4 @@
-# mod10Algorithm
+# Mod 10 Algorithm
 [Mod 10 Algorithm](https://edabit.com/challenge/dcPJS9rwjfvtXyM2d)
 
 ## Created

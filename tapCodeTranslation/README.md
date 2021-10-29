@@ -1,4 +1,4 @@
-# tapCodeTranslation
+# Tap Code Translation
 [Tap Code Translation](https://edabit.com/challenge/dXjHmqGvSwn9toe6R)
 
 ## Created

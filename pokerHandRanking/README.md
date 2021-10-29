@@ -1,4 +1,4 @@
-# pokerHandRanking
+# Poker Hand Ranking
 [Poker Hand Ranking](https://edabit.com/challenge/EZKbj4mM3xEfDpb5c)
 
 ## Created

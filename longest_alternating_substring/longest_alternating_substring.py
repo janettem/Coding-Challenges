@@ -18,19 +18,19 @@ def get_longest_substring(string: str) -> str:
 
 def test():
     print(get_longest_substring("225424272163254474441338664823"))
-    # => "272163254"
+    # -> "272163254"
     print(get_longest_substring("594127169973391692147228678476"))
-    # => "16921472"
+    # -> "16921472"
     print(get_longest_substring("721449827599186159274227324466"))
-    # => "7214"
+    # -> "7214"
     print(get_longest_substring("122"))
-    # => "12"
+    # -> "12"
     print(get_longest_substring("11"))
-    # => None
+    # -> None
     print(get_longest_substring("1"))
-    # => None
+    # -> None
     print(get_longest_substring(""))
-    # => None
+    # -> None
 
 
 def main():

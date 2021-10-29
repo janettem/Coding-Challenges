@@ -1,4 +1,4 @@
-# largestIsland
+# Largest Island
 [Largest Island](https://edabit.com/challenge/EmEaT9K4wKe3g6QH3)
 
 ## Created
