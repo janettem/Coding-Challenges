@@ -2,7 +2,7 @@
 [The Connell Sequence](https://edabit.com/challenge/FTw5dJAnFtxjwSfuQ)
 
 ## Created
-2.11.2021
+02.11.2021
 
 ## Explanation
 The Connell sequence can be represented as a growing series of numbered lines. The line number is the quantity of the numbers in the line and the square of the last number of the line. The numbers in the line increase by two:
