@@ -98,3 +98,10 @@ C++
 
 ### Explanation
 A maze can be represented by a 2D array, where 0s represent walkeable areas, and 1s represent walls. You start on the upper left corner and the exit is on the lower right corner. Create a function that returns true if you can walk from one end of the maze to the other. You can only move horizontally and vertically.
+
+## The Connell Sequence
+### Language
+C++
+
+### Explanation
+TBA
