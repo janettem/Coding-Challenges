@@ -2,9 +2,9 @@
 
 static std::string getOriginalNumber(std::string number);
 static char calculateCheckDigit(std::string number);
-static std::string *doubleEveryOtherDigit(std::string number);
+static std::vector<std::string> doubleEveryOtherDigit(std::string originalNumber);
 static std::string doubleDigit(char digit);
-static std::string sumDoubledDigits(std::string *number, int size);
+static std::string sumDoubledDigits(std::vector<std::string> doubledDigits);
 static int sumDigits(std::string number);
 static int charToInt(char c);
 static char calculate(int sum);
@@ -23,24 +23,22 @@ static std::string getOriginalNumber(std::string number)
 
 static char calculateCheckDigit(std::string originalNumber)
 {
-    std::string *doubledDigits = doubleEveryOtherDigit(originalNumber);
-    std::string summedDigits = sumDoubledDigits(doubledDigits, originalNumber.length());
+    std::vector<std::string> doubledDigits = doubleEveryOtherDigit(originalNumber);
+    std::string summedDigits = sumDoubledDigits(doubledDigits);
     int sum = sumDigits(summedDigits);
-    delete[] doubledDigits;
     return calculate(sum);
 }
 
-static std::string *doubleEveryOtherDigit(std::string originalNumber)
+static std::vector<std::string> doubleEveryOtherDigit(std::string originalNumber)
 {
-    int size = originalNumber.length();
-    std::string *doubledDigits = new std::string[size];
+    std::vector<std::string> doubledDigits;
     bool otherDigit = true;
-    for (int i = size - 1; i >= 0; i--)
+    for (int i = originalNumber.length() - 1; i >= 0; i--)
     {
         if (otherDigit)
-            doubledDigits[i] = doubleDigit(originalNumber[i]);
+            doubledDigits.insert(doubledDigits.begin(), doubleDigit(originalNumber[i]));
         else
-            doubledDigits[i] = originalNumber[i];
+            doubledDigits.insert(doubledDigits.begin(), std::string(1, originalNumber[i]));
         otherDigit = !otherDigit;
     }
     return doubledDigits;
@@ -51,10 +49,10 @@ static std::string doubleDigit(char digit)
     return std::to_string(charToInt(digit) * 2);
 }
 
-static std::string sumDoubledDigits(std::string *doubledDigits, int size)
+static std::string sumDoubledDigits(std::vector<std::string> doubledDigits)
 {
     std::string summedDigits;
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < doubledDigits.size(); i++)
         summedDigits += std::to_string(sumDigits(doubledDigits[i]));
     return summedDigits;
 }
