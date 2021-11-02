@@ -104,4 +104,4 @@ A maze can be represented by a 2D array, where 0s represent walkeable areas, and
 C++
 
 ### Explanation
-TBA
+The Connell sequence can be represented as a growing series of numbered lines. The line number is the quantity of the numbers in the line and the square of the last number of the line. The numbers in the line increase by two. Given a start line, an end line, and a number, implement a function that returns the index of the number in the generated portion of the Connell sequence. If the number is not found, return -1.
