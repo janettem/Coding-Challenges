@@ -105,3 +105,10 @@ C++
 
 ### Explanation
 The Connell sequence can be represented as a growing series of numbered lines. The line number is the quantity of the numbers in the line and the square of the last number of the line. The numbers in the line increase by two. Given a start line, an end line, and a number, implement a function that returns the index of the number in the generated portion of the Connell sequence. If the number is not found, return -1.
+
+## Maximum Sum
+### Language
+C++
+
+### Explanation
+Given a sequence of integers, take a continuous chunk of it, so that the sum of its elements is maximized. You only need to return the maximum sum.
