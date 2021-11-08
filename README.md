@@ -1,6 +1,17 @@
 # Coding-Challenges
 Coding Challenges
 
+## Roman Numerals
+
+### Created
+05.11.2021
+
+### Language
+C++
+
+### Explanation
+Create a function that takes in a Roman numeral as a string and converts it to an integer, returning the result. The function should work for all Roman numerals representing positive integers less than 4000.
+
 ## Maximum Sum
 
 ### Created
